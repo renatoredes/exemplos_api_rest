@@ -1,4 +1,4 @@
-# Exemplo CRUD + Padrões de Projetos.
+# Exemplo CRUD API Spring Boot + Padrões de Projetos.
 
 ### Hierarquia de classes nos package 
 
