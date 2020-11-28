@@ -1,6 +1,6 @@
 # Exemplo CRUD API Spring Boot + Padrões de Projetos.
 
-### Hierarquia de classes nos package 
+### Hierarquia de package 
 
 * domain: Domain Model Patterns são padrões de desenvolvimento e estruturação de aplicações cujo domínio é o principal.
 
