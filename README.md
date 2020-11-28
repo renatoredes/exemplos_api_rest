@@ -10,7 +10,7 @@
 Um repositório também pode consultar diretamente serviços externos.
 
 * service: Os Serviços de Domínio implementam a lógica de negócios além das tarefas de negócio ficam todas validações 
-tratamento de exceção antes de persistir os dados no banco de dados da aplicaçãp.
+tratamento de exceção antes de persistir os dados no banco de dados da aplicação.
 
 * controller: As classes de Controller é semelhante ao controlador MVC elas lidam com solicitações HTTP
 de entrada e envia uma resposta de volta ao chamador.
