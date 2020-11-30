@@ -1,4 +1,4 @@
-# Exemplo CRUD API Spring Boot + Padrões de Projetos.
+# Exemplo CRUD API Spring Boot + JPA + Padrões de Projetos.
 
 1. clone o repositório `git https://github.com/renatoredes/exemplo_crud_jpa_api_padroes.git` <br />
 2. Maven - UPDATE - Project - Force Update <br />
