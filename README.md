@@ -1,5 +1,7 @@
 # Exemplo CRUD API Spring Boot + Padrões de Projetos.
 
+1. clone o repositório `git https://github.com/renatoredes/exemplo_crud_jpa_api_padroes.git` <br />
+2. Maven - UPDATE - Project - Force Update <br />
 ### Hierarquia de package 
 
 * domain: Domain Model Patterns são padrões de desenvolvimento e estruturação de aplicações cujo domínio é o principal.
@@ -14,3 +16,8 @@ tratamento de exceção antes de persistir os dados no banco de dados da aplica�
 
 * controller: As classes de Controller é semelhante ao controlador MVC elas lidam com solicitações HTTP
 de entrada e envia uma resposta de volta ao chamador.
+
+
+
+## License
+MIT © [Renato Ferreira](https://github.com/renatoredes)

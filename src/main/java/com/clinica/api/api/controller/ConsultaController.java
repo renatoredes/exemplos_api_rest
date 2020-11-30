@@ -113,7 +113,6 @@ public class ConsultaController {
 			
 			Object novoValor = ReflectionUtils.getField(field, consultaOrigem);
 			
-			System.out.println(nomePropriedade + " = " + valorPropriedade + " = " + novoValor);
 			
 			ReflectionUtils.setField(field, consultaDestino, novoValor);
 		});
