@@ -29,6 +29,23 @@ tratamento de exceção antes de persistir os dados no banco de dados da aplica�
 de entrada e envia uma resposta de volta ao chamador.
 
 
+# Exemplo de testes via Postman
+
+* GET
+
+![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/GetMedicos.png)
+
+* GET/ID
+
+![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/GetIDMedicos.png)
+
+* PUT
+
+![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/PutMedico.png)
+
+* PATCH
+
+![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/PATCH.png)
 
 ## License
 MIT © [Renato Ferreira](https://github.com/renatoredes)
