@@ -44,7 +44,7 @@ de entrada e envia uma resposta de volta ao chamador.
 ### PATCH
 ![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/PATCH.png)
 
-### PATCH
+### DELETE
 ![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/DeleteMedico.png)
 
 ## License
