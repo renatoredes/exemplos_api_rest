@@ -31,20 +31,17 @@ de entrada e envia uma resposta de volta ao chamador.
 
 # Exemplo de testes via Postman
 
-* GET
+### GET
 
 ![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/GetMedicos.png)
 
-* GET/ID
-
+### GET/ID
 ![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/GetIDMedicos.png)
 
-* PUT
-
+### PUT
 ![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/PutMedico.png)
 
-* PATCH
-
+### PATCH
 ![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/PATCH.png)
 
 ## License
