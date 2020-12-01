@@ -7,6 +7,8 @@
 ### Objetivo
 disponibilizar um exemplo de CRUD Api Rest de exemplo para ser reutilizável.
 
+- Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).
+
 * Modelagem de dados inicial - este modelo pode ser evoluído.
 - Estamos evoluindo este exemplo 😀
 
