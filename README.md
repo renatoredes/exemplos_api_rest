@@ -2,6 +2,17 @@
 
 1. clone o repositório `git https://github.com/renatoredes/exemplo_crud_jpa_api_padroes.git` <br />
 2. Maven - UPDATE - Project - Force Update <br />
+
+
+### Objetivo
+disponibilizar um exemplo de CRUD Api Rest de exemplo para ser reutilizável.
+
+* Modelagem de dados inicial - este modelo pode ser evoluído.
+- Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/sis-jpa-jpql/wiki).
+
+![cat](https://github.com/renatoredes/sis-jpa-jpql/blob/main/screenshot/entidade_medico_consulta.png)
+
+
 ### Hierarquia de package 
 
 * domain: Domain Model Patterns são padrões de desenvolvimento e estruturação de aplicações cujo domínio é o principal.
