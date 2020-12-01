@@ -50,6 +50,7 @@ public class MedicoController {
 	}
 	/*
 	 * Busca por nome especifico ou letra que conter dentro do nome.
+	 * @RequestParam buscar por Query params
 	 */
 	@GetMapping("/busca-por-nome")
 	public List<Medico> cozinhasPorNome(@RequestParam("nome") String nome) {
