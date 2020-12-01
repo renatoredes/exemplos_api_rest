@@ -8,7 +8,7 @@
 disponibilizar um exemplo de CRUD Api Rest de exemplo para ser reutilizável.
 
 * Modelagem de dados inicial - este modelo pode ser evoluído.
-- Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/sis-jpa-jpql/wiki).
+- Estamos evoluindo este exemplo 😀
 
 ![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/entidade_medico_consulta.png)
 
@@ -27,7 +27,6 @@ tratamento de exceção antes de persistir os dados no banco de dados da aplica�
 
 * controller: As classes de Controller é semelhante ao controlador MVC elas lidam com solicitações HTTP
 de entrada e envia uma resposta de volta ao chamador.
-
 
 
 ## License
