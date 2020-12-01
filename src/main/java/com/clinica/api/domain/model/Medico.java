@@ -22,18 +22,29 @@ public class Medico {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	private String contato;
+
 	@Column(nullable = false)
 	private String nome;
 
+	@Column(nullable = false)
+	private String crm;
+	
+	@Column(name = "especialidade_medica")
+	private String especialidade;
+	
 	public Medico() {
 
 	}
 
-	public Medico(Long id, String nome) {
+	public Medico(Long id, String nome, String crm, String especialidade, String contato) {
 		this.id = id;
 		this.nome = nome;
+		this.crm = crm;
+		this.especialidade = especialidade;
+		this.contato = contato;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -50,10 +61,37 @@ public class Medico {
 		this.nome = nome;
 	}
 
+	public String getCrm() {
+		return crm;
+	}
+
+	public void setCrm(String crm) {
+		this.crm = crm;
+	}
+
+	public String getEspecialidade() {
+		return especialidade;
+	}
+
+	public void setEspecialidade(String especialidade) {
+		this.especialidade = especialidade;
+	}
+
+	public String getContato() {
+		return contato;
+	}
+
+	public void setContato(String contato) {
+		this.contato = contato;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((contato == null) ? 0 : contato.hashCode());
+		result = prime * result + ((crm == null) ? 0 : crm.hashCode());
+		result = prime * result + ((especialidade == null) ? 0 : especialidade.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
@@ -68,6 +106,21 @@ public class Medico {
 		if (getClass() != obj.getClass())
 			return false;
 		Medico other = (Medico) obj;
+		if (contato == null) {
+			if (other.contato != null)
+				return false;
+		} else if (!contato.equals(other.contato))
+			return false;
+		if (crm == null) {
+			if (other.crm != null)
+				return false;
+		} else if (!crm.equals(other.crm))
+			return false;
+		if (especialidade == null) {
+			if (other.especialidade != null)
+				return false;
+		} else if (!especialidade.equals(other.especialidade))
+			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;

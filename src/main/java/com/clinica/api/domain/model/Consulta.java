@@ -22,24 +22,29 @@ public class Consulta {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(nullable = false)
-	private String nome;
-	
+
+	@Column(name = "descricao_consulta", nullable = false)
+	private String descricao;
+
 	@Column(name = "valor_consulta", nullable = false)
 	private BigDecimal valorConsulta;
-	
+
+	/**
+	 * Este relacionamento indica que muitas consulta pode ser realizada por 1
+	 * medico.
+	 */
 	@ManyToOne
-	@JoinColumn(name = "medico_id", nullable = false)
+	@JoinColumn(name = "id_medico", nullable = false)
 	private Medico medico;
 
 	public Consulta() {
 
 	}
 
-	public Consulta(Long id, String nome, BigDecimal valorConsulta, Medico medico) {
+	public Consulta(Long id, String descricao, BigDecimal valorConsulta, Medico medico) {
+		super();
 		this.id = id;
-		this.nome = nome;
+		this.descricao = descricao;
 		this.valorConsulta = valorConsulta;
 		this.medico = medico;
 	}
@@ -52,12 +57,12 @@ public class Consulta {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public BigDecimal getValorConsulta() {
@@ -80,9 +85,9 @@ public class Consulta {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((medico == null) ? 0 : medico.hashCode());
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + ((valorConsulta == null) ? 0 : valorConsulta.hashCode());
 		return result;
 	}
@@ -96,6 +101,11 @@ public class Consulta {
 		if (getClass() != obj.getClass())
 			return false;
 		Consulta other = (Consulta) obj;
+		if (descricao == null) {
+			if (other.descricao != null)
+				return false;
+		} else if (!descricao.equals(other.descricao))
+			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -106,11 +116,6 @@ public class Consulta {
 				return false;
 		} else if (!medico.equals(other.medico))
 			return false;
-		if (nome == null) {
-			if (other.nome != null)
-				return false;
-		} else if (!nome.equals(other.nome))
-			return false;
 		if (valorConsulta == null) {
 			if (other.valorConsulta != null)
 				return false;
@@ -118,5 +123,6 @@ public class Consulta {
 			return false;
 		return true;
 	}
-		
+	
+	
 }
