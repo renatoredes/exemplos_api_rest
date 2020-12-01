@@ -32,6 +32,8 @@ tratamento de exceção antes de persistir os dados no banco de dados da aplica�
 * controller: As classes de Controller é semelhante ao controlador MVC elas lidam com solicitações HTTP
 de entrada e envia uma resposta de volta ao chamador.
 
+### Projeto open source qualquer pessoal pode contribuir com este projeto para contribuir entre no grupo do whatsapp através do link abaixo:
+* https://chat.whatsapp.com/JvxUyEw1b73EdFM1pTYglP
 
 ## License
 MIT © [Renato Ferreira](https://github.com/renatoredes)
