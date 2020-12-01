@@ -10,7 +10,7 @@ disponibilizar um exemplo de CRUD Api Rest de exemplo para ser reutilizável.
 * Modelagem de dados inicial - este modelo pode ser evoluído.
 - Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/sis-jpa-jpql/wiki).
 
-![cat](https://github.com/renatoredes/sis-jpa-jpql/blob/main/screenshot/entidade_medico_consulta.png)
+![cat](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/blob/main/screenshot/entidade_medico_consulta.png)
 
 
 ### Hierarquia de package 
