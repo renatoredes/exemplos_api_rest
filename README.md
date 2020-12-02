@@ -2,12 +2,18 @@
 
 ###  Spring Boot + JPA
 
-1. clone o repositório `git https://github.com/renatoredes/exemplo_crud_jpa_api_padroes.git` <br />
-2. Maven - UPDATE - Project - Force Update <br />
-
-
 ### Objetivo
 disponibilizar um exemplo de CRUD Api Rest de exemplo para ser reutilizável.
+
+### Por onde começar?
+* Instale: <br />
+* Escolha uma IDE de sua preferência Exemplo: STS, Eclipse, Inteligin ou qualquer outra.<br />
+* Git<br />
+* Escolha um banco de dados de sua preferencia para simular os testes localmente em sua maquina.<br />
+* Clone o projeto em seu ambiente local <br />
+
+1. clone o repositório `git https://github.com/renatoredes/exemplo_crud_jpa_api_padroes.git` <br />
+2. Maven - UPDATE - Project - Force Update <br />
 
 - Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).
 
@@ -32,6 +38,7 @@ tratamento de exceção antes de persistir os dados no banco de dados da aplica�
 * controller: As classes de Controller é semelhante ao controlador MVC elas lidam com solicitações HTTP
 de entrada e envia uma resposta de volta ao chamador.
 
+### Contribuir para projeto 
 ### Projeto open source qualquer pessoal pode contribuir com este projeto 
 * para contribuir entre no grupo do whatsapp através do link abaixo: <br />
 * Grupo foi criado para quem quiser contribuir com o projeto API REST Sistema de Clinica medica <br />
