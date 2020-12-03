@@ -1,7 +1,7 @@
 # Exemplos API REST
 
 ### Objetivo
-Disponibilizar exemplos API REST que pode ser reutilizável.
+Disponibilizar exemplos de API REST que pode ser reutilizável.
 
 ### Por onde começar?
 * 1° Instalação: <br />
@@ -15,10 +15,7 @@ Disponibilizar exemplos API REST que pode ser reutilizável.
 * 7° Print os testes realizados e adicione na pasta screenshot e faça a documentação conforme estar na abra Wiki <br />
 * 8° Solicite Pull Request conforme alinhamento no grupo.<br />
 
-
 - Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).📝📝📝
-
-
 
 ### Contribuir para projeto 
 ### Projeto open source qualquer pessoal pode contribuir com este projeto 
@@ -37,6 +34,12 @@ Disponibilizar exemplos API REST que pode ser reutilizável.
 
 ### Grupo: 👇
 * https://chat.whatsapp.com/JvxUyEw1b73EdFM1pTYglP
+
+### Front-end web
+* Neste projeto nosso foco é apenas criar exemplos de API REST, porém nada impede de você consumir um dos exemplos
+e criar um projeto front-end, você pode criar um exemplo e documentar da mesma forma que estamos fazendo com a API
+- Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).📝📝📝
+* Seu projeto front pode ser em qualquer framework ou linguagem de sua escolha.
 
 ## License
 MIT © [Renato Ferreira](https://github.com/renatoredes)
