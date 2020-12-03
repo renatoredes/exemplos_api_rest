@@ -23,13 +23,13 @@ Disponibilizar exemplos API REST que pode ser reutilizável.
 ### Contribuir para projeto 
 ### Projeto open source qualquer pessoal pode contribuir com este projeto 
 * para contribuir entre no grupo do whatsapp através do link abaixo: <br />
-* Grupo foi criado para quem quiser contribuir com o projeto API REST Sistema de Clinica medica <br />
+* Grupo foi criado para todos que desejam contribuir com o projeto API REST Exemplos <br />
 
 
 ### Regras
 * Todas implementação deve ser uma nova branch 
 * Verificar no grupo qual branch atual para solicitar pull request
-
+### Grupo:
 * https://chat.whatsapp.com/JvxUyEw1b73EdFM1pTYglP
 
 ## License
