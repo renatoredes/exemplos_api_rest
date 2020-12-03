@@ -43,6 +43,9 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
 ### Quem define as taks ? as nossas atividades ?
 * Nosso objetivos é criar exemplos reutilizável então você informa no grupo o que poderia ser implementado e cria suas proprias atividades.
 
+### O que já temos pronto neste projeto para ser reutilizado ?
+* CRUD: Padrões de Projetos + Spring Boot + JPA + JPQL.
+* Estamos evoluindo o projeto 🚀🚀🚀🚀
 
 ## License
 MIT © [Renato Ferreira](https://github.com/renatoredes)
