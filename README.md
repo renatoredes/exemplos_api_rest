@@ -1,8 +1,5 @@
 # Exemplos API REST
 
-### Exemplo CRUD API REST 
-* Utilizando: Padrões de Projetos + Spring Boot + JPA + JPQL
-
 ### Objetivo
 disponibilizar exemplos utilizando conceito de  Api Rest para ser reutilizável.
 
