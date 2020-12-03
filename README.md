@@ -4,17 +4,20 @@
 * Utilizando: Padrões de Projetos + Spring Boot + JPA + JPQL
 
 ### Objetivo
-disponibilizar um exemplo de CRUD Api Rest de exemplo para ser reutilizável.
+disponibilizar exemplos utilizando conceito de  Api Rest para ser reutilizável.
 
 ### Por onde começar?
-* Instale: <br />
-* Escolha uma IDE de sua preferência Exemplo: STS, Eclipse, Inteligin ou qualquer outra.<br />
-* Git<br />
-* Escolha um banco de dados de sua preferencia para simular os testes localmente em sua maquina.<br />
-* Clone o projeto em seu ambiente local <br />
+* 1° Instale: <br />
+* 2° Escolha uma IDE de sua preferência Exemplo: STS, Eclipse, Inteligin ou qualquer outra.<br />
+* 3° Git<br />
+* 4° Escolha um banco de dados de sua preferencia para simular os testes localmente em sua maquina.<br />
+* 5° Clone o projeto em seu ambiente local <br />
+ .clone o repositório `git https://github.com/renatoredes/exemplo_crud_jpa_api_padroes.git` <br />
+ .Maven - UPDATE - Project - Force Update <br />
+* 6° Crie sua branch e realize suas implementação e customização.<br />
+* 7° Print os testes realizados e adicione na pasta screenshot e faça a documentação conforme estar na abra Wiki <br />
+* 8° Solicite Pull Request conforme alinhamento no grupo.<br />
 
-1. clone o repositório `git https://github.com/renatoredes/exemplo_crud_jpa_api_padroes.git` <br />
-2. Maven - UPDATE - Project - Force Update <br />
 
 - Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).
 
