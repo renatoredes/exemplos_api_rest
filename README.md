@@ -32,7 +32,7 @@ Disponibilizar exemplos API REST que pode ser reutilizável.
 - Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).
 * Verificar no grupo qual branch atual para solicitar pull request
 * Os exemplos de API REST deve ser criados utilizando Spring boot e testados.
-* Agendaremos uma reunião por mês com todos os contribuites do projeto.
+* Agendaremos uma reunião por mês com todos os contribuites do projeto, não é obrigatório participar..
 ### Grupo:
 * https://chat.whatsapp.com/JvxUyEw1b73EdFM1pTYglP
 
