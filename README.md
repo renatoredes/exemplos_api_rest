@@ -4,7 +4,7 @@
 Disponibilizar exemplos API REST que pode ser reutilizável.
 
 ### Por onde começar?
-* 1° Instale: <br />
+* 1° Instalação: <br />
 * 2° Escolha uma IDE de sua preferência Exemplo: STS, Eclipse, Inteligin ou qualquer outra.<br />
 * 3° Git<br />
 * 4° Escolha um banco de dados de sua preferencia para simular os testes localmente em sua maquina.<br />
