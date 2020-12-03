@@ -25,6 +25,11 @@ Disponibilizar exemplos API REST que pode ser reutilizável.
 * para contribuir entre no grupo do whatsapp através do link abaixo: <br />
 * Grupo foi criado para quem quiser contribuir com o projeto API REST Sistema de Clinica medica <br />
 
+
+### Regras
+* Todas implementação deve ser uma nova branch 
+* Verificar no grupo qual branch atual para solicitar pull request
+
 * https://chat.whatsapp.com/JvxUyEw1b73EdFM1pTYglP
 
 ## License
