@@ -33,7 +33,7 @@ Disponibilizar exemplos API REST que pode ser reutilizável.
 * Verificar no grupo qual branch atual para solicitar pull request
 * Os exemplos de API REST deve ser criados utilizando Spring boot e testados.
 * Agendaremos uma reunião por mês com todos os contribuites do projeto, não é obrigatório participar..
-### Grupo:
+### Grupo: 👇
 * https://chat.whatsapp.com/JvxUyEw1b73EdFM1pTYglP
 
 ## License
