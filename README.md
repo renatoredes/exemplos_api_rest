@@ -40,6 +40,9 @@ Disponibilizar exemplos de API REST que pode ser reutilizável.
 e criar um projeto front-end, você pode criar um exemplo e documentar da mesma forma que estamos fazendo com a API
 - Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).📝📝📝
 * Seu projeto front pode ser em qualquer framework ou linguagem de sua escolha.
+### Quem define as taks ? as nossas atividades ?
+* Nosso objetivos é criar exemplos reutilizável então você informa no grupo o que poderia ser implementado e cria suas proprias atividades.
+
 
 ## License
 MIT © [Renato Ferreira](https://github.com/renatoredes)
