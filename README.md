@@ -16,7 +16,7 @@ Disponibilizar exemplos API REST que pode ser reutilizável.
 * 8° Solicite Pull Request conforme alinhamento no grupo.<br />
 
 
-- Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).
+- Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).📝📝📝
 
 
 
@@ -28,7 +28,7 @@ Disponibilizar exemplos API REST que pode ser reutilizável.
 
 ### Regras
 * Todas implementação deve ser criada uma nova branch 
-* Cada branch Deve estar documentada para servir de exemplo
+* Cada branch Deve estar documentada 📝 para servir de exemplo
 - Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).
 * Verificar no grupo qual branch atual para solicitar pull request
 * Os exemplos de API REST deve ser criados utilizando Spring boot e testados.
