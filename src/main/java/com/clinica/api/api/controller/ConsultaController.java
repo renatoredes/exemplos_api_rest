@@ -1,8 +1,10 @@
 package com.clinica.api.api.controller;
 
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,15 +38,15 @@ public class ConsultaController {
 	
 	@GetMapping
 	public List<Consulta> listar() {
-		return iConsultaRepository.listar();
+		return iConsultaRepository.findAll();
 	}
 	
 	@GetMapping("/{consultaId}")
 	public ResponseEntity<Consulta> buscar(@PathVariable Long consultaId) {
-		Consulta consulta = iConsultaRepository.buscar(consultaId);
+		Optional<Consulta> consulta = iConsultaRepository.findById(consultaId);
 		
-		if (consulta != null) {
-			return ResponseEntity.ok(consulta);
+		if (consulta.isPresent()) {
+			return ResponseEntity.ok(consulta.get());
 		}
 		
 		return ResponseEntity.notFound().build();
@@ -63,16 +65,17 @@ public class ConsultaController {
 		}
 	}
 	/**
-	 * 
 	 * @param consultaId recebe o código a ser atualizado
 	 * @param consulta
 	 * @return os dados da consulta médica atualizada
+	 * 
+	 * os nomes de edpoint deve ser alterado e padronizado conforme sua necessidade
 	 */
 	@PutMapping("/{consultaId}")
 	public ResponseEntity<?> atualizar(@PathVariable Long consultaId,
 			@RequestBody Consulta consulta) {
 		try {
-			Consulta consultaMedicaAtual = iConsultaRepository.buscar(consultaId);
+			Consulta consultaMedicaAtual = iConsultaRepository.findById(consultaId).orElse(null);
 			
 			if (consultaMedicaAtual != null) {
 				BeanUtils.copyProperties(consulta, consultaMedicaAtual, "id");
@@ -88,11 +91,71 @@ public class ConsultaController {
 					.body(e.getMessage());
 		}
 	}
+	/**
+	 * 
+	 * @param valorInicial recebe um valor inicial para realizar o get
+	 * @param valorFinal  recebe um valor final para realizar o get
+	 * @return uma lista de consultas por intervalo de valor
+	 * exemplo:http://localhost:8080/consultas/por-valor-consulta?valorInicial=1&valorFinal=500
+	 * 
+	 * os nomes de edpoint deve ser alterado e padronizado conforme sua necessidade
+	 */
 	
+	@GetMapping("/por-valor-consulta")
+	public List<Consulta> consultasPorValorInicialFinal(
+			BigDecimal valorInicial, BigDecimal valorFinal) {
+		return iConsultaRepository.findByValorConsultaBetween(valorInicial, valorFinal);
+	}
+	/**
+	 * 
+	 * @param descricao recebe a descrição da consulta medica
+	 * @param medicoId recebe o id do medico cadastrado
+	 * @return retorna uma lista de consultas relacionado a um determinado id do medico
+	 * 
+	 * exemplo teste realizado no postman: http://localhost:8080/consultas/por-descricao-consulta-id?descricao=paciente&medicoId=1
+	 * 
+	 * os nomes de edpoint deve ser alterado e padronizado conforme sua necessidade
+	 */
+	@GetMapping("/por-descricao-consulta-id")
+	public List<Consulta> consultasPorNomeId(
+			String descricao, Long medicoId) {
+		return iConsultaRepository.findByDescricaoContainingAndMedicoId(descricao, medicoId);
+	}
+	
+	/**
+	 * 
+	 * @param descricao recebe a descrição da consulta medica
+	 * @param medicoId recebe o id do medico cadastrado
+	 * @return retorna uma lista de consultas relacionado a um determinado id do medico
+	 * 
+	 * exemplo teste realizado no postman: http://localhost:8080/consultas/por-descricao-consulta-id?descricao=paciente&medicoId=1
+	 * 
+	 * os nomes de edpoint deve ser alterado e padronizado conforme sua necessidade
+	 * este é exemplo foi customizado utilizando @Query + JPQL
+	 */
+	@GetMapping("/por-descricao-consulta-idmedico")
+	public List<Consulta> descricaoConsultaIdMedicosCadastrado( String descricao, Long medicoId) {
+		return iConsultaRepository.descricaoConsultaIdMedico(descricao, medicoId);
+	}
+	
+	/** 
+	 * consultas utilizando Query em arquivo xml customizado
+	 * 
+	 * @param descricao recebe a descrição da consulta medica
+	 * @param medicoId recebe o id do medico cadastrado
+	 * @return  retorna uma lista de consultas relacionado a um determinado id do medico 
+	 */
+	@GetMapping("/descricao-consulta-id-relacionada")
+	public List<Consulta> descricaoConsultaIdMedicoRelacionado(
+			String descricao, Long medicoId) {
+		return iConsultaRepository.descricaoConsultaIdMedicoRelacionado(descricao, medicoId);
+	}
+	
+
 	@PatchMapping("/{consultaId}")
 	public ResponseEntity<?> atualizarParcial(@PathVariable Long consultaId,
 			@RequestBody Map<String, Object> campos) {
-		Consulta consultaAtual = iConsultaRepository.buscar(consultaId);
+		Consulta consultaAtual = iConsultaRepository.findById(consultaId).orElse(null);
 		
 		if (consultaAtual == null) {
 			return ResponseEntity.notFound().build();
@@ -112,7 +175,6 @@ public class ConsultaController {
 			field.setAccessible(true);
 			
 			Object novoValor = ReflectionUtils.getField(field, consultaOrigem);
-			
 			
 			ReflectionUtils.setField(field, consultaDestino, novoValor);
 		});
