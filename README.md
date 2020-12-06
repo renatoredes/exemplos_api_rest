@@ -45,6 +45,7 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
 
 ### O que já temos pronto neste projeto para ser reutilizado ?
 * CRUD: Padrões de Projetos + Spring Boot + JPA + JPQL.
+* CRUD: Utilizando recursos Spring Data
 * Estamos evoluindo o projeto 🚀🚀🚀🚀
 
 ## License
