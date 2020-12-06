@@ -44,7 +44,7 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
 * Nosso objetivos é criar exemplos reutilizável então você informa no grupo o que poderia ser implementado e cria suas proprias atividades.
 
 ### O que já temos pronto neste projeto para ser reutilizado ?
-* CRUD: Padrões de Projetos + Spring Boot + JPA + JPQL.
+* CRUD: Padrões de Projetos + Spring Boot + JPA + JPQL. (branch: exemplo-api-rest-utilizando-jpa-jpql)
 * CRUD: Utilizando recursos Spring Data (branch: exemplo-utilizando-spring-data)
 * Estamos evoluindo o projeto 🚀🚀🚀🚀
 
