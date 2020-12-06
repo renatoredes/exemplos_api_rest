@@ -14,10 +14,10 @@ public class ConsultaService {
 
 	@Autowired
 	private IConsultaRepository iConsultaRepository;
-	
+
 	@Autowired
 	private IMedicoRepository iMedicoRepository;
-	
+
 	/**
 	 * 
 	 *  método serve tanto para salvar quanto para atualizar
@@ -25,16 +25,13 @@ public class ConsultaService {
 	 */
 	public Consulta salvar(Consulta consulta) {
 		Long medicoId = consulta.getMedico().getId();
-		Medico medico = iMedicoRepository.buscar(medicoId);
 		
-		if (medico == null) {
-			throw new RecursoNaoEncontradaException(
-				String.format("Não existe cadastrado medico de código %d", medicoId));
-		}
-		
+		Medico medico = iMedicoRepository.findById(medicoId)
+				.orElseThrow(() -> new RecursoNaoEncontradaException(
+						String.format("Não existe cadastrado medico de código %d", medicoId)));
 		consulta.setMedico(medico);
 		
-		return iConsultaRepository.salvar(consulta);
-	}
-	
+		return iConsultaRepository.save(consulta);
+		}
+
 }

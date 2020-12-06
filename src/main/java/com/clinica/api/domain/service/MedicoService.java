@@ -19,18 +19,19 @@ public class MedicoService {
 	
 	/**
 	 * método serve tanto para salvar quanto para atualizar
+	 * Utilizando Spring Data
 	 */
 	public Medico salvar(Medico medico) {
-		return iMedicoRepository.salvar(medico);
+		return iMedicoRepository.save(medico);
 	}
 
 	public void excluir(Long medicoId) {
 		try {
-			iMedicoRepository.remover(medicoId);
+			iMedicoRepository.deleteById(medicoId);
 
 		} catch (EmptyResultDataAccessException e) {
 			throw new RecursoNaoEncontradaException(
-					String.format("Não existe cadastro de meidico com código %d", medicoId));
+					String.format("Não existe cadastro de médico com código %d", medicoId));
 
 		} catch (DataIntegrityViolationException e) {
 			throw new RecursoEmUsoException(
