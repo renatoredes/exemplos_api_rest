@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -13,12 +14,12 @@ import com.clinica.api.domain.model.Consulta;
 /***
  * 
  * @author Renato
- * Exemplos de utilização de consultas com Spring Data
+ * Exemplos de utilização de consultas com Spring Data ou Jpa Specification 
  * você deve modificar os nomes de métodos conforme padrões e nescessidades.
  *
  */
 @Repository
-public interface IConsultaRepository extends JpaRepository<Consulta, Long> {
+public interface IConsultaRepository extends JpaRepository<Consulta, Long>, JpaSpecificationExecutor<Consulta> {
 
 	/**
 	 * Utilizando Keyword do Spring boot

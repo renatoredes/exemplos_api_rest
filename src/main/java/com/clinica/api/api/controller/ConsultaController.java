@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.NumberFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ReflectionUtils;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.clinica.api.domain.exception.RecursoNaoEncontradaException;
@@ -37,8 +39,15 @@ public class ConsultaController {
 	private ConsultaService consultaService;
 	
 	@GetMapping
-	public List<Consulta> listar() {
-		return iConsultaRepository.findAll();
+	public List<Consulta> listar(
+		
+			@RequestParam(name = "idConsulta",       required = false)   Long idConsulta,
+			@RequestParam(name = "descricao", 	     required = false)  String descricao, 
+			@RequestParam(name = "valorConsulta",    required = false) @NumberFormat(pattern = "#0,00") BigDecimal valorConsulta, 
+			@RequestParam(name = "idMedico", 	     required = false)  Long idMedico			
+			
+			) {
+		return consultaService.listarConsultas(idConsulta, descricao, valorConsulta, idMedico);
 	}
 	
 	@GetMapping("/{consultaId}")
@@ -165,6 +174,9 @@ public class ConsultaController {
 		
 		return atualizar(consultaId, consultaAtual);
 	}
+	
+	
+	
 
 	private void merge(Map<String, Object> dadosOrigem, Consulta consultaDestino) {
 		ObjectMapper objectMapper = new ObjectMapper();
@@ -179,5 +191,8 @@ public class ConsultaController {
 			ReflectionUtils.setField(field, consultaDestino, novoValor);
 		});
 	}
+	
+	
+	
 	
 }
