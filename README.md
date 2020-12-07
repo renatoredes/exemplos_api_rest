@@ -32,7 +32,7 @@ Disponibilizar exemplos de API REST que pode ser reutilizável.
 * Agendaremos uma reunião por mês com todos os contribuites do projeto, não é obrigatório participar..
 * Como funciona as tarefas? você surgere as suas atividades o que precisa ser feito ou melhorado cria uma branch e faz as suas customização e documenta o exemplo para ser reutilizável.
 
-### Grupo: 👇
+### Grupo de Whatsapp: 👇
 * https://chat.whatsapp.com/JvxUyEw1b73EdFM1pTYglP
 
 ### Front-end web
