@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.clinica.api.domain.exception.RecursoNaoEncontradaException;
 import com.clinica.api.domain.model.Consulta;
-import com.clinica.api.domain.repository.IConsultaRepository;
+import com.clinica.api.domain.repository.ConsultaRepository;
 import com.clinica.api.domain.service.ConsultaService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -31,19 +31,19 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ConsultaController {
 
 	@Autowired
-	private IConsultaRepository iConsultaRepository;
+	private ConsultaRepository consultaRepository;
 	
 	@Autowired
 	private ConsultaService consultaService;
 	
 	@GetMapping
 	public List<Consulta> listar() {
-		return iConsultaRepository.findAll();
+		return consultaRepository.findAll();
 	}
 	
 	@GetMapping("/{consultaId}")
 	public ResponseEntity<Consulta> buscar(@PathVariable Long consultaId) {
-		Optional<Consulta> consulta = iConsultaRepository.findById(consultaId);
+		Optional<Consulta> consulta = consultaRepository.findById(consultaId);
 		
 		if (consulta.isPresent()) {
 			return ResponseEntity.ok(consulta.get());
@@ -75,7 +75,7 @@ public class ConsultaController {
 	public ResponseEntity<?> atualizar(@PathVariable Long consultaId,
 			@RequestBody Consulta consulta) {
 		try {
-			Consulta consultaMedicaAtual = iConsultaRepository.findById(consultaId).orElse(null);
+			Consulta consultaMedicaAtual = consultaRepository.findById(consultaId).orElse(null);
 			
 			if (consultaMedicaAtual != null) {
 				BeanUtils.copyProperties(consulta, consultaMedicaAtual, "id");
@@ -104,7 +104,7 @@ public class ConsultaController {
 	@GetMapping("/por-valor-consulta")
 	public List<Consulta> consultasPorValorInicialFinal(
 			BigDecimal valorInicial, BigDecimal valorFinal) {
-		return iConsultaRepository.findByValorConsultaBetween(valorInicial, valorFinal);
+		return consultaRepository.findByValorConsultaBetween(valorInicial, valorFinal);
 	}
 	/**
 	 * 
@@ -119,7 +119,7 @@ public class ConsultaController {
 	@GetMapping("/por-descricao-consulta-id")
 	public List<Consulta> consultasPorNomeId(
 			String descricao, Long medicoId) {
-		return iConsultaRepository.findByDescricaoContainingAndMedicoId(descricao, medicoId);
+		return consultaRepository.findByDescricaoContainingAndMedicoId(descricao, medicoId);
 	}
 	
 	/**
@@ -135,7 +135,7 @@ public class ConsultaController {
 	 */
 	@GetMapping("/por-descricao-consulta-idmedico")
 	public List<Consulta> descricaoConsultaIdMedicosCadastrado( String descricao, Long medicoId) {
-		return iConsultaRepository.descricaoConsultaIdMedico(descricao, medicoId);
+		return consultaRepository.descricaoConsultaIdMedico(descricao, medicoId);
 	}
 	
 	/** 
@@ -148,14 +148,20 @@ public class ConsultaController {
 	@GetMapping("/descricao-consulta-id-relacionada")
 	public List<Consulta> descricaoConsultaIdMedicoRelacionado(
 			String descricao, Long medicoId) {
-		return iConsultaRepository.descricaoConsultaIdMedicoRelacionado(descricao, medicoId);
+		return consultaRepository.descricaoConsultaIdMedicoRelacionado(descricao, medicoId);
 	}
 	
+	@GetMapping("/filtra-consulta/descricao/valor-inicial-final")
+	public List<Consulta> consultaMedicaPorDescricaoeValor(String descricao, 
+			BigDecimal valorInicialConsultaMedica, BigDecimal valorFinalConsultaMedica){
+				return consultaRepository.buscarConsultasPorDescricaoeValor(descricao, 
+						valorInicialConsultaMedica, valorFinalConsultaMedica);
+	}
 
 	@PatchMapping("/{consultaId}")
 	public ResponseEntity<?> atualizarParcial(@PathVariable Long consultaId,
 			@RequestBody Map<String, Object> campos) {
-		Consulta consultaAtual = iConsultaRepository.findById(consultaId).orElse(null);
+		Consulta consultaAtual = consultaRepository.findById(consultaId).orElse(null);
 		
 		if (consultaAtual == null) {
 			return ResponseEntity.notFound().build();
