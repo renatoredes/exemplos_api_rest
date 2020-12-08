@@ -80,14 +80,11 @@ public class ConsultaRepositoryImpl implements CustomizedConsultaRepository  {
 			parametros.put("valorFinalConsultaMedica", valorFinalConsultaMedica);
 		}
 		
-		TypedQuery<Consulta> query = manager
-				.createQuery(jpql.toString(), Consulta.class);
+		TypedQuery<Consulta> query = manager.createQuery(jpql.toString(), Consulta.class);
 		
 		parametros.forEach((chave, valor) -> query.setParameter(chave, valor));
 
 		return query.getResultList();
-
-		
 	}
 	
 }
