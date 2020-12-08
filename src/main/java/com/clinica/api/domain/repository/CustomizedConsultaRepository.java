@@ -7,14 +7,33 @@ import com.clinica.api.domain.model.Consulta;
 /**
  * 
  * @author Renato
- * Utilizando interface customizada
+ * Utilizando Repositorio customizado
  *  
- * exemplo do endpoint: http://localhost:8080/consultas/filtra-consulta/descricao/valor-inicial-final?descricao=a&valorInicialConsultaMedica=500&valorFinalConsultaMedica=700
  * 
  */
 public interface CustomizedConsultaRepository {
 
+ /**
+ * 
+ * @param descricao 
+ * @param valorInicialConsultaMedica
+ * @param valorFinalConsultaMedica
+ * @return consulta utilizando todos os parametros caso não preencher todos retornará uma lista vazia
+ *
+ * exemplo do endpoint: http://localhost:8080/consultas/filtra-consulta/descricao/valor-inicial-final?descricao=a&valorInicialConsultaMedica=500&valorFinalConsultaMedica=700
+ */
+ 
 	List<Consulta> buscarConsultasPorDescricaoeValor(String descricao,
+			BigDecimal valorInicialConsultaMedica, BigDecimal valorFinalConsultaMedica);
+
+	/**
+	 * 
+	 * @param descricao
+	 * @param valorInicialConsultaMedica
+	 * @param valorFinalConsultaMedica
+	 * @return retorna uma consulta caso algum parametro for preenchido não é obrigatorio preencher todos os campos
+	 */
+	List<Consulta> buscarConsultasPorDescricaoeValorDinamicamente(String descricao,
 			BigDecimal valorInicialConsultaMedica, BigDecimal valorFinalConsultaMedica);
 
 }
