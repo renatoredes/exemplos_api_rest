@@ -34,7 +34,17 @@ public interface CustomizedConsultaRepository {
 	 * @return retorna uma consulta caso algum parametro for preenchido não é obrigatorio preencher todos os campos
 	 */
 	List<Consulta> buscarConsultasPorDescricaoeValorDinamicamente(String descricao,
-			BigDecimal valorInicialConsultaMedica, BigDecimal valorFinalConsultaMedica);	
+			BigDecimal valorInicialConsultaMedica, BigDecimal valorFinalConsultaMedica);
+
+	/**
+	 * neste exemplo utilizamos APO Criteriaquery:
+	 * O usuario deve preencher algum valor no filtro não é obrigatorio preencher todos os campos dos parametros
+	 * 
+	 * 
+	 * estamos customizado repositorio CustomizedConsultaRepository
+	 */
+	List<Consulta> buscarConsultasMedicasCriteriaquery(String descricao, BigDecimal valorInicialConsultaMedica,
+			BigDecimal valorFinalConsultaMedica);	
 	
 	
 

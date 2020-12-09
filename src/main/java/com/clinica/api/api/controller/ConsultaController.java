@@ -164,6 +164,14 @@ public class ConsultaController {
 				return consultaRepository.buscarConsultasPorDescricaoeValorDinamicamente(descricao, 
 						valorInicialConsultaMedica, valorFinalConsultaMedica);
 	}
+	
+
+	@GetMapping("/filtra-consulta/descricao/valor-inicial-final/dinamicamente/criteriaquery")
+	public List<Consulta> buscarConsultasMedicasCriteriaquery(String descricao, 
+			BigDecimal valorInicialConsultaMedica, BigDecimal valorFinalConsultaMedica){
+				return consultaRepository.buscarConsultasMedicasCriteriaquery(descricao, 
+						valorInicialConsultaMedica, valorFinalConsultaMedica);
+	}
 
 	@PatchMapping("/{consultaId}")
 	public ResponseEntity<?> atualizarParcial(@PathVariable Long consultaId,
