@@ -7,7 +7,7 @@ import com.clinica.api.domain.model.Consulta;
 /**
  * 
  * @author Renato
- * Utilizando Repositorio customizado
+ * Repositorio customizado
  *  
  * 
  */
@@ -34,6 +34,8 @@ public interface CustomizedConsultaRepository {
 	 * @return retorna uma consulta caso algum parametro for preenchido não é obrigatorio preencher todos os campos
 	 */
 	List<Consulta> buscarConsultasPorDescricaoeValorDinamicamente(String descricao,
-			BigDecimal valorInicialConsultaMedica, BigDecimal valorFinalConsultaMedica);
+			BigDecimal valorInicialConsultaMedica, BigDecimal valorFinalConsultaMedica);	
+	
+	
 
 }

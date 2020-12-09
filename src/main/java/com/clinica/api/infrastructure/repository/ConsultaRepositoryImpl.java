@@ -17,7 +17,7 @@ import com.clinica.api.domain.repository.CustomizedConsultaRepository;
 /**
  * 
  * @author Renato
- * Customização do repositorio o nome precisa ser o mesmo da interface + Impl
+ * Implementação repositorio customizado o nome precisa ser o mesmo da interface + Impl
  *
  */
 
@@ -51,7 +51,7 @@ public class ConsultaRepositoryImpl implements CustomizedConsultaRepository  {
 	}
 	
 	/**
-	 * neste exemplo:
+	 * neste exemplo utilizamos JPQL:
 	 * O usuario deve preencher algum valor no filtro não é obrigatorio preencher todos os campos dos parametros
 	 * devem ser prenchido no minimo um valor para retornar uma lista de consultas medica
 	 * 
@@ -66,6 +66,7 @@ public class ConsultaRepositoryImpl implements CustomizedConsultaRepository  {
 		
 		var parametros = new HashMap<String, Object>();
 		
+		/*verifica se temos algum texto no parametro se tiver faz alguma coisa */
 		if (StringUtils.hasLength(descricao)) {
 			jpql.append("and descricao like :descricao ");
 			parametros.put("descricao", "%" + descricao + "%");
@@ -87,4 +88,36 @@ public class ConsultaRepositoryImpl implements CustomizedConsultaRepository  {
 		return query.getResultList();
 	}
 	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
