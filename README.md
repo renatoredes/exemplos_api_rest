@@ -8,10 +8,10 @@ Disponibilizar exemplos de API REST que pode ser reutilizável.
 * 2° Escolha uma IDE de sua preferência Exemplo: STS, Eclipse, Inteligin ou qualquer outra.<br />
 * 3° Git<br />
 * 4° Escolha um banco de dados de sua preferencia para simular os testes localmente em sua maquina.<br />
-* 5° Clone o projeto em seu ambiente local <br />
+* 5°  Você pode dar um fork no projeto, clonar em seu PC <br />
  .clone o repositório `git https://github.com/renatoredes/exemplo_crud_jpa_api_padroes.git` <br />
  .Maven - UPDATE - Project - Force Update <br />
-* 6° Crie sua branch e realize suas implementação e customização.<br />
+* 6° Crie sua branch realize faça correção de bugs, ou crie implementação customização de exemplos.<br />
 * 7° Print os testes realizados e adicione na pasta screenshot e faça a documentação conforme estar na abra Wiki <br />
 * 8° Solicite Pull Request conforme alinhamento no grupo.<br />
 
@@ -24,8 +24,8 @@ Disponibilizar exemplos de API REST que pode ser reutilizável.
 
 
 ### Regras
-* Todas implementação deve ser criada uma nova branch 
-* Cada branch Deve estar documentada 📝 para servir de exemplo
+* Todas implementação deve ser criada uma nova branch local e solicitar Pull Request para branch atual informada no grupo.
+* Cada branch Deve estar documentada 📝 para servir de exemplo para outras pessoas utilizar.
 - Click no link para acessar a 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).
 * Verificar no grupo qual branch atual para solicitar pull request
 * Os exemplos de API REST deve ser criados utilizando Spring boot e testados.
