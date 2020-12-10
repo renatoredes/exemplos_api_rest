@@ -5,6 +5,7 @@
 .classpath
 # Log file
 *.log
+application.properties
 
 # BlueJ files
 *.ctxt
@@ -30,6 +31,7 @@ hs_err_pid*
 
 ### Eclipse ###
 .metadata
+bin
 bin/
 tmp/
 *.tmp
@@ -665,3 +667,4 @@ MigrationBackup/
 .svn/
 
 # End of https://www.toptal.com/developers/gitignore/api/git,svn
+
