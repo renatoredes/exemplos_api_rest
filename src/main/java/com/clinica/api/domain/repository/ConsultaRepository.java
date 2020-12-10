@@ -18,7 +18,7 @@ import com.clinica.api.domain.model.Consulta;
  *
  */
 @Repository
-public interface IConsultaRepository extends JpaRepository<Consulta, Long> {
+public interface ConsultaRepository extends JpaRepository<Consulta, Long>, CustomizedConsultaRepository{
 
 	/**
 	 * Utilizando Keyword do Spring boot
@@ -63,6 +63,7 @@ public interface IConsultaRepository extends JpaRepository<Consulta, Long> {
 	 * @return retorna uma lista de consultas relacionada ao id do medico cadastrado
 	 */
 	List<Consulta> descricaoConsultaIdMedicoRelacionado (String descricao, @Param("id") Long medicoId);
+	
 	
 	
 }
