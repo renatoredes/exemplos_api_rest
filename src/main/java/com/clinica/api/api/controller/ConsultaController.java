@@ -24,6 +24,7 @@ import com.clinica.api.domain.exception.RecursoNaoEncontradaException;
 import com.clinica.api.domain.model.Consulta;
 import com.clinica.api.domain.repository.ConsultaRepository;
 import com.clinica.api.domain.service.ConsultaService;
+import com.clinica.api.infrastructure.specification.ConsultaSpecification;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RestController
@@ -199,6 +200,17 @@ public class ConsultaController {
 			
 			ReflectionUtils.setField(field, consultaDestino, novoValor);
 		});
+	}
+	/***
+	 * 
+	 * @param dever ser passado neste parametro a descricao da consulta ou digitar parte do nome de uma consulta
+	 * @return uma consulta com valor gratuito
+	 */
+	@GetMapping("/consultas-valor-gratis-descricao-consulta")
+	public List<Consulta> consultasGratuitasClienteFidelidade(String descricao) {
+		
+		return consultaRepository.findAll(ConsultaSpecification.consultaGratis()
+				.and(ConsultaSpecification.budcarPorNomeOuLetras(descricao)));
 	}
 	
 }
