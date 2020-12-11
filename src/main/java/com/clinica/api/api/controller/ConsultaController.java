@@ -207,7 +207,7 @@ public class ConsultaController {
 	 * @return uma consulta com valor gratuito
 	 */
 	@GetMapping("/consultas-valor-gratis-descricao-consulta")
-	public List<Consulta> restaurantesComFreteGratis(String descricao) {
+	public List<Consulta> consultasGratuitasClienteFidelidade(String descricao) {
 		
 		return consultaRepository.findAll(ConsultaSpecification.consultaGratis()
 				.and(ConsultaSpecification.budcarPorNomeOuLetras(descricao)));
