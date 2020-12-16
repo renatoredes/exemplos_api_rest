@@ -50,10 +50,11 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
 
 ## Exemplo projeto de automação sistema clínica médica
 * Regras deste exemplo de automação 
-1° Abra uma issue com a atividade que você vai realizar
-2° Realize o fork do projeto
-3° Crie sua branch com o nome da issue
-4° Solicite pull request para branch: exemplo-projeto-clinica-medica
+1° Abra uma issue com a atividade que você vai realizar <br />
+2° Realize o fork do projeto <br />
+3° Crie sua branch com o nome da issue <br />
+4° Documente o que foi feito no Wiki do projeto e Solicite pull request para branch: exemplo-projeto-clinica-medica <br />
+ 
 
 ### DER <br />
 ![cat](https://github.com/renatoredes/exemplos_api_rest/blob/exemplo-projeto-clinica-medica/screenshot/DER.png)
