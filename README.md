@@ -49,7 +49,7 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
 * Estamos evoluindo o projeto 🚀🚀🚀🚀
 
 ## Exemplo projeto de automação sistema clínica médica
-* Regras deste exemplo de automação 
+* Regras deste exemplo de automação <br />
 1° Abra uma issue com a atividade que você vai realizar <br />
 2° Realize o fork do projeto <br />
 3° Crie sua branch com o nome da issue <br />
