@@ -48,5 +48,26 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
 * CRUD: Utilizando recursos Spring Data (branch: exemplo-utilizando-spring-data)
 * Estamos evoluindo o projeto 🚀🚀🚀🚀
 
+### Exemplo projeto de automação sistema clínica médica
+* DER <br />
+![cat](https://github.com/renatoredes/exemplos_api_rest/blob/exemplo-projeto-clinica-medica/screenshot/DER.png)
+
+### Requisitos Funcionais
+• relatório de agendamentos de consultas médicas
+• alteração da senha de acesso
+• cadastro de pacientes
+• agendamento de consulta
+• cadastro de medicamentos
+• cadastro de exames complementares
+• geração de receitas
+• geração laudos
+• consulta do histórico dos pacientes (prontuário)
+• atualização do prontuário
+• cadastro de clínicas médicas aos administradores
+• cadastro de usuários do sistema aos administradores
+• cadastro de profissionais médicos
+• cadastro de planos de saúde conveniados
+• cadastro de cargos
+
 ## License
 MIT © [Renato Ferreira](https://github.com/renatoredes)
