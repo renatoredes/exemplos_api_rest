@@ -1,6 +1,6 @@
 # Exemplos API REST
 
-![cat](https://cio.com.br/wp-content/uploads/2018/04/opensource_317617616.jpg)
+![cat](https://tridenstechnology.com/wp-content/uploads/2020/02/open-source.png)
 <br />
 ### Objetivo
 Disponibilizar exemplos de API REST que pode ser reutilizável.
