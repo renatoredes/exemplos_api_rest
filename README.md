@@ -1,5 +1,7 @@
 # Exemplos API REST
 
+![cat](https://cio.com.br/wp-content/uploads/2018/04/opensource_317617616.jpg)
+<br />
 ### Objetivo
 Disponibilizar exemplos de API REST que pode ser reutilizável.
 
