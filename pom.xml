@@ -5,18 +5,19 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.1.7.RELEASE</version>
-    <relativePath/> 
+    <version>2.4.1</version>
+    <relativePath/> <!-- lookup parent from repository -->
   </parent>
   
-  <groupId>com.clinica</groupId>
-  <artifactId>clnica-api</artifactId>
+  <groupId>br.com.clinica</groupId>
+  <artifactId>clinica-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>clinica-api</name>
-  <description>API sistema clnico</description>
+  <description>API de clinica</description>
 
   <properties>
-    <java.version>12</java.version>
+    <java.version>11</java.version>
+    <modelmapper.version>2.3.0</modelmapper.version>
   </properties>
 
   <dependencies>
@@ -51,6 +52,25 @@
     	<groupId>org.projectlombok</groupId>
     	<artifactId>lombok</artifactId>
     </dependency>
+    <dependency>
+    	<groupId>org.flywaydb</groupId>
+    	<artifactId>flyway-core</artifactId>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.commons</groupId>
+    	<artifactId>commons-lang3</artifactId>
+    </dependency>
+    <dependency>
+    	<groupId>io.rest-assured</groupId>
+    	<artifactId>rest-assured</artifactId>
+    	<scope>test</scope>
+    </dependency>
+    
+	<dependency>
+		<groupId>org.modelmapper</groupId>
+		<artifactId>modelmapper</artifactId>
+		<version>${modelmapper.version}</version>
+	</dependency>
   </dependencies>
 
   <build>
@@ -58,6 +78,9 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+      	<artifactId>maven-failsafe-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
