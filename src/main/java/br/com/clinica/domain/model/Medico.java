@@ -21,7 +21,7 @@ public class Medico {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_medico")
-	private Long idMedico;
+	private Long id;
 	
 	@Column(nullable = false,name = "nome_medico", length=50)
 	private String nome;

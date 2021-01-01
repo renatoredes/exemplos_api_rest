@@ -20,7 +20,7 @@ public class Covenio {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_covenio")
-	private Long idConsulta;
+	private Long id;
 	
 	@Column(nullable = false,name = "nome_convenio", length=100)
 	private String nomeCovenio;

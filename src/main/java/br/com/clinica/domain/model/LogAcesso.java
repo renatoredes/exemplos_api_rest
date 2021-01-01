@@ -1,7 +1,7 @@
 package br.com.clinica.domain.model;
 
-
 import java.time.*;
+
 import javax.persistence.*;
 import lombok.*;
 
@@ -15,21 +15,17 @@ import lombok.*;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class LaudoMedico {
+public class LogAcesso {
 
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_laudo")
+	@Column(name = "id_log_de_acesso")
 	private Long id;
 	
-	@Column(nullable = false,name = "descricao_laudo", length=200)
-	private String descricaoLaudoMedico;
+	@Column(name = "data_acesso")
+	private LocalDate dataAcesso;
 	
-
-	@Column(name = "data_laudo_medico")
-	private LocalDate dataLaudoMedico;
-	
-	@Column(name = "hora_laudo_medico")
-	private LocalTime horaLaudoMedico;
+	@Column(name = "nome_usuario",length=200)
+	private String nomeUsuario;
 }
