@@ -39,7 +39,7 @@ public class Exame {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "receita_id")
-	private Receita receita;
+	private Receita receita; 
 	
 	
 }
