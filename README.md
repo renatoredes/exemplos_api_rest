@@ -1,6 +1,6 @@
 # Exemplos API REST - Utilizando Spring boot
 
-![cat](https://tridenstechnology.com/wp-content/uploads/2020/02/open-source.png)
+![cat](https://www.suse.com/c/wp-content/uploads/2018/10/Open-Source-Software-.jpg)
 <br />
 ### Objetivo
 Disponibilizar exemplos de API REST que pode ser reutilizável.
