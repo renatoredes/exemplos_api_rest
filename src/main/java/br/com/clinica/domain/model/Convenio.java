@@ -1,6 +1,9 @@
 package br.com.clinica.domain.model;
 
 import java.time.*;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 import lombok.*;
 
@@ -14,12 +17,11 @@ import lombok.*;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Covenio {
+public class Convenio {
 
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_covenio")
 	private Long id;
 	
 	@Column(nullable = false,name = "nome_convenio", length=100)
@@ -31,5 +33,8 @@ public class Covenio {
 	@Column(nullable = false,name = "descricao_regiao", length=100)
 	private String descricaoRegiao;
 	
+	//-- um medico pode ter muitas pacientes --//
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "convenio", cascade = CascadeType.ALL)
+	private List<Paciente> pacientes = new ArrayList<>();
 	
 }

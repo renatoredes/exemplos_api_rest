@@ -18,7 +18,6 @@ public class Medicamento {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_medicamento")
 	private Long id;
 	
 	@Column(name = "nome_medicamento",length=100)

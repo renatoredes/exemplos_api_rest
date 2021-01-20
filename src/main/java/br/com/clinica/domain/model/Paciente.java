@@ -1,7 +1,6 @@
 package br.com.clinica.domain.model;
 
 import javax.persistence.*;
-import lombok.*;
 
 /**
  * 
@@ -10,40 +9,80 @@ import lombok.*;
  * https://github.com/renatoredes
  */
 
-@Data
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@DiscriminatorValue("Paciente")
 @Entity
-public class Paciente {
+public class Paciente extends Pessoa{
+	
+	@Column(nullable = false ,name = "numero_carteira",  length=50)
+	private String numeroCarteira;	
 
-	@EqualsAndHashCode.Include
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_paciente")
-	private Long id;
 	
-	@Column(nullable = false,name = "nome_paciente", length=50)
-	private String nomePaciente;
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "covenio_id")
+	private Convenio convenio;
+
+
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "laudo_id")
+	private LaudoMedico laudoMedico;
 	
-	@Column(nullable = false,name = "sobre_nome_paciente", length=50)
-	private String sobreNomePaciente;
-	
-	@Column(nullable = false, name = "rg_paciente", length=10)
-	private String rgPaciente;
-	
-	@Column(nullable = false, name = "cpf_paciente",length=11)
-	private String cpfPaciente;
-	
-	@Column(nullable = false,name = "nome_mae_paciente", length=50)
-	private String nomeMaePaciente;
-	
-	@Column(nullable = false,name = "nome_pae_paciente", length=50)
-	private String nomePaePaciente;
-	
-	@Column(name = "numero_carteira")
-	private Long numeroCarteira;
-	
-	@Column(name = "email_paciente", length=100)
-	private String emailPaciente;
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "prontuario_id")
+	private Prontuario prontuario;
 	
 	
+	public String getNumeroCarteira() {
+		return numeroCarteira;
+	}
+
+
+	public void setNumeroCarteira(String numeroCarteira) {
+		this.numeroCarteira = numeroCarteira;
+	}
+
+
+	public Convenio getConvenio() {
+		return convenio;
+	}
+
+
+	public void setConvenio(Convenio convenio) {
+		this.convenio = convenio;
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((convenio == null) ? 0 : convenio.hashCode());
+		result = prime * result + ((numeroCarteira == null) ? 0 : numeroCarteira.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Paciente other = (Paciente) obj;
+		if (convenio == null) {
+			if (other.convenio != null)
+				return false;
+		} else if (!convenio.equals(other.convenio))
+			return false;
+		if (numeroCarteira == null) {
+			if (other.numeroCarteira != null)
+				return false;
+		} else if (!numeroCarteira.equals(other.numeroCarteira))
+			return false;
+		return true;
+	}
+
+	
+
 }

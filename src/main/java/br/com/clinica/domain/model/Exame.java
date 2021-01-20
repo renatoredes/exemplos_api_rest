@@ -20,7 +20,6 @@ public class Exame {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_exame")
 	private Long id;
 
 	@Column(nullable = false,name = "nome_exame", length=200)
@@ -38,7 +37,9 @@ public class Exame {
 	@Column(nullable = false,name = "observacao", length=200)
 	private String observacao;
 	
-	
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "receita_id")
+	private Receita receita;
 	
 	
 }

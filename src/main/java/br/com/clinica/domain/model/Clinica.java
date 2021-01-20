@@ -18,7 +18,6 @@ public class Clinica {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_clinica")
 	private Long id;
 	
 	@Column(name = "nome_clinica",length=100)
@@ -38,6 +37,9 @@ public class Clinica {
 	
 	@Column(name = "numero_whatsapp_clinica",length=20)
 	private String numerowhatsapp;
+	
+	@Embedded
+	private Endereco endereco;
 
 
 }

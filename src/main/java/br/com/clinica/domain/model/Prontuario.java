@@ -20,7 +20,6 @@ public class Prontuario {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_prontuario")
 	private Long id;
 
 	@Column(nullable = false,name = "descricao_medicamento", length=200)

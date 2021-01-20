@@ -2,6 +2,8 @@ package br.com.clinica.domain.model;
 
 
 import java.time.*;
+import java.util.*;
+
 import javax.persistence.*;
 import lombok.*;
 
@@ -20,7 +22,6 @@ public class LaudoMedico {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_laudo")
 	private Long id;
 	
 	@Column(nullable = false,name = "descricao_laudo", length=200)
@@ -32,4 +33,7 @@ public class LaudoMedico {
 	
 	@Column(name = "hora_laudo_medico")
 	private LocalTime horaLaudoMedico;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "laudoMedico")
+	private List<Medico> consultas = new ArrayList<>();
 }

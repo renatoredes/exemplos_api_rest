@@ -19,7 +19,6 @@ public class Usuario {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_usuario")
 	private Long id;
 		
 	@Column(name = "nome_login_usuario",length=50)

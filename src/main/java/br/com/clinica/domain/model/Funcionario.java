@@ -1,39 +1,22 @@
 package br.com.clinica.domain.model;
 
-
 import javax.persistence.*;
-import lombok.*;
 
-/**
- * 
- * @author Renato Ferreira
- * https://www.linkedin.com/in/renatoredes/
- * https://github.com/renatoredes
- */
 
-@Data
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+
+@DiscriminatorValue("Funcionario")
 @Entity
-public class Funcionario {
+public class Funcionario extends Pessoa {
 
-	@EqualsAndHashCode.Include
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_funcionario")
-	private Long id;
+	@Column(name = "matricula_funcionario",length=50)
+	private String matriculaFuncionario;
 	
-	@Column(nullable = false,name = "nome_funcionario", length=50)
-	private String nome;
-	
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cargo_funcionario_id")
+	private CargoFuncionario cargoFuncionario;
 
-	@Column(nullable = false,name = "sobre_funcionario", length=50)
-	private String sobreNome;
-	
-	@Column(nullable = false, name = "rg_funcionario", length=10)
-	private String rgMedico;
-	
-	@Column(nullable = false, name = "cpf_funcionario",length=11)
-	private String cpfMedico;	
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "clinica_id")
+	private Clinica clinica;
 
-	
 }

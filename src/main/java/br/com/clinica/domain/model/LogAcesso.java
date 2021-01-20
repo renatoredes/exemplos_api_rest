@@ -20,7 +20,6 @@ public class LogAcesso {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_log_de_acesso")
 	private Long id;
 	
 	@Column(name = "data_acesso")

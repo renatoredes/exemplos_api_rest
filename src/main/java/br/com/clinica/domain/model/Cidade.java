@@ -3,10 +3,10 @@ package br.com.clinica.domain.model;
 import javax.persistence.*;
 import javax.validation.*;
 import javax.validation.constraints.*;
-import lombok.*;
 import javax.validation.groups.*;
 
-import br.com.clinica.core.*;
+import br.com.clinica.core.Groups;
+import lombok.*;
 
 /**
  * 
@@ -23,12 +23,14 @@ public class Cidade {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_cidade")
 	private Long id;
 	
 	@NotBlank
 	@Column(nullable = false,name = "nome_cidade")
 	private String nome;
+	
+//	@Embedded
+//	private Endereco endereco;
 	
 	@Valid
 	@ConvertGroup(from = Default.class, to = Groups.EstadoId.class)
