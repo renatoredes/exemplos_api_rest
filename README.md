@@ -55,7 +55,8 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
 1° Abra uma issue com a atividade que você vai realizar <br />
 2° Realize o fork do projeto baixe o branch de modelagem inicial <br />
 3° Crie sua branch com o nome da issue <br />
-4° Documente o que foi feito no Wiki do projeto e Solicite pull request para branch: exemplo-projeto-clinica-medica <br />
+4° Documente o que foi feito no Wiki do projeto <br />
+5° Solicite pull request para branch: develop <br />
  
 
 ### DER <br />
