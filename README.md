@@ -58,9 +58,9 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
 4° Documente o que foi feito no Wiki do projeto <br />
 5° Solicite pull request para branch: develop <br />
 6° você pode iniciar sua contribuição escrevendo issues de pequenas atividades. .<br />
-exemplo: você pode escrever uma issue de cadastro de funcionário <br />
+exemplo: você pode escrever uma issue de cadastro de funcionário, de acordo com o diagrama de banco de dados <br />
 7° você pode iniciar sua contribuição realizando pequenos crud cadastros de alguns requisitos funcionais..<br />
-de acordo com o diagrama de banco de dados..<br />
+de acordo com o diagrama de banco de dados ou issue aberta..<br />
 8° DUVIDAS ? Entra no grupo de apoio do whatsapp que ajudo você.
 
 
