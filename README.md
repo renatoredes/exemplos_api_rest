@@ -59,7 +59,7 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
  
 
 ### DER <br />
-![cat](https://github.com/renatoredes/exemplos_api_rest/blob/exemplo-projeto-clinica-medica/screenshot/DER.png)
+![cat](https://github.com/renatoredes/exemplos_api_rest/blob/modelagem-dados-hibernate/screenshot/ModelagemHibernateDev.png)
 
 ### Requisitos Funcionais
 * relatório de agendamentos de consultas médicas
