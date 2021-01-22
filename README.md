@@ -1,4 +1,4 @@
-# Siga meus Exemplos de API REST - Utilizando Spring boot
+# 😄👉 Siga meus Exemplos de API REST - Utilizando Spring boot
 
 ![cat](https://www.suse.com/c/wp-content/uploads/2018/10/Open-Source-Software-.jpg)
 <br />
@@ -65,6 +65,7 @@ de acordo com o diagrama de banco de dados ou issue aberta..<br />
 
 
 ### DER <br />
+* 🚨🚨 ATENÇÃO PROJETO EM ANDAMENTO.
 ![cat](https://github.com/renatoredes/exemplos_api_rest/blob/modelagem-dados-hibernate/screenshot/ModelagemHibernateDev.png)
 
 ### branch inicial: modelagem-dados-hibernate
