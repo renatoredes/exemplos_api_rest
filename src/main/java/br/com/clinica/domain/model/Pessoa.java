@@ -29,10 +29,10 @@ public abstract class Pessoa {
 	@Column(nullable = false,name = "nome_pai", length=50)
 	private String nomePai;
 	
-	@Column(nullable = false, name = "numero_rg", length=10)
+	@Column(nullable = false, name = "numero_rg", unique = true, length=10)
 	private String rg;
 	
-	@Column(nullable = false, name = "numero_cpf",length=11)
+	@Column(nullable = false, name = "numero_cpf", unique = true, length=11)
 	private String cpf;
 	
 	@Column(nullable = false , name = "telefone_fixo", length=20)

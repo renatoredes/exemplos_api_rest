@@ -19,4 +19,5 @@ public class Funcionario extends Pessoa {
     @JoinColumn(name = "clinica_id")
 	private Clinica clinica;
 
+	
 }
