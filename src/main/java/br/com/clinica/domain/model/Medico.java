@@ -17,7 +17,6 @@ import lombok.*;
 @Entity
 public class Medico{
 
-
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,19 +28,16 @@ public class Medico{
 	@Column(nullable = false,name = "sobre_nome", length=50)
 	private String sobreNome;
 	
-	@Column(nullable = false, name = "rg_documento", length=10)
+	@Column(name = "rg_documento", length=10)
 	private String rg;
 	
-	@Column(nullable = false, name = "cpf_documento",length=11)
+	@Column(name = "cpf_documento",length=11)
 	private String cpf;
-	
-	@Column(nullable = false , name = "matricula_funcionario", length=7)
-	private String numeroMatricula;	
-
+		
 	@Column(name = "crm_medico", length=7)
 	private String crmMedico;
 	
-	@Column(nullable = false , name = "especialidade_medica", length=200)
+	@Column(nullable = false , name = "especialidade_medica", length=100)
 	private String especialidade;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -53,7 +49,7 @@ public class Medico{
 	private List<Consulta> consultas = new ArrayList<>();
 	
 	//-- um medico pode gerar muitas receitas --//
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "medico", cascade = CascadeType.ALL)
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "medico", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
 	private List<Receita> receitas = new ArrayList<>();
 	
 	@Column(length=50)
