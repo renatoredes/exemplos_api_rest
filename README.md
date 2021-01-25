@@ -1,13 +1,13 @@
 # 😄👉 Siga meus Exemplos de API REST - Utilizando Spring boot
 
-![cat](https://www.suse.com/c/wp-content/uploads/2018/10/Open-Source-Software-.jpg)
-<br />
-
 ![](https://img.shields.io/badge/java_11-✓-green.svg)
 ![](https://img.shields.io/badge/spring_boot-✓-green.svg)
 ![](https://img.shields.io/badge/h2-✓-green.svg)
 ![](https://img.shields.io/badge/Hibernate/JPA-✓-green.svg)
 ![](https://img.shields.io/badge/PostgreSQL-✓-green.svg)
+
+![cat](https://www.suse.com/c/wp-content/uploads/2018/10/Open-Source-Software-.jpg)
+<br />
 
 ### Objetivo
 Disponibilizar exemplos de API REST que pode ser reutilizável.
