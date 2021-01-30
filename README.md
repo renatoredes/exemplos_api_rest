@@ -74,7 +74,8 @@ de acordo com o diagrama de banco de dados ou issue aberta..<br />
 * 🚨🚨 ATENÇÃO PROJETO EM ANDAMENTO.
 ![cat](https://github.com/renatoredes/exemplos_api_rest/blob/modelagem-dados-hibernate/screenshot/ModelagemHibernateDev.png)
 
-### branch modelagem das tabelas utilizando hibernate jpa: modelagem-dados-hibernate
+### Modelagem das tabelas utilizando hibernate jpa
+* baixe a branch: modelagem-dados-hibernate
 
 ### Requisitos Funcionais
 * relatório de agendamentos de consultas médicas
@@ -91,7 +92,7 @@ de acordo com o diagrama de banco de dados ou issue aberta..<br />
 * cadastro de usuários do sistema aos administradores
 * cadastro de funcionarios 
 * cadastro de pacientes 
-* cadastro de médicos
+* cadastro de médicos - baixe a branch: medico_feature 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).📝📝📝
 * cadastro de planos de saúde conveniados
 * cadastro de cargos
 <br />
