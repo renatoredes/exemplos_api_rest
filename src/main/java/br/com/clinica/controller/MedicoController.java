@@ -27,10 +27,9 @@ public class MedicoController {
 
 	private MedicoService medicoService;
 	
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public MessageResponseDTO createPerson(@RequestBody @Valid MedicoDTO medicoDTO) {
+    public MessageResponseDTO createMedico(@RequestBody @Valid MedicoDTO medicoDTO) {
         return medicoService.createMedico(medicoDTO);
     }
 

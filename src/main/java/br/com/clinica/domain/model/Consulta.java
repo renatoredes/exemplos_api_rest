@@ -30,12 +30,12 @@ public class Consulta {
 	@Column(name = "descricao_consulta",length=200)
 	private String descricaoConsulta;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "medico_id")
+	@ManyToOne
+    @JoinColumn(name = "medico_id", nullable = false)
 	private Medico medico;
 	
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
     @JoinColumn(name = "paciente_id")
 	private Paciente paciente;
 

@@ -18,10 +18,12 @@ import br.com.clinica.domain.model.Consulta;
 import br.com.clinica.domain.model.LaudoMedico;
 import br.com.clinica.domain.model.Receita;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class MedicoDTO {
@@ -38,31 +40,22 @@ public class MedicoDTO {
 
 	@Size(max = 10)
 	private String rg;
-	
+
 	@CPF
 	private String cpf;
 
 	@NotEmpty
 	@Size(max = 50)
 	private String crmMedico;
-	
+
 	@NotEmpty
 	@Size(min = 2, max = 100)
 	private String especialidade;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "laudo_id")
-	private LaudoMedico laudoMedico;
+	private String email;
 
-	// -- um medico pode realizar muitas consultas --//
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "medico")
 	@Valid
 	@NotEmpty
-	private List<Consulta> consultas = new ArrayList<>();
+	private List<LaudoMedicoDTO> laudoMedicos;
 
-	// -- um medico pode gerar muitas receitas --//
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "medico", cascade = CascadeType.ALL)
-	private List<Receita> receitas = new ArrayList<>();
-
-	private String email;
 }

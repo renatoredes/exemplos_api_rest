@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import br.com.clinica.domain.model.Medico;
 import br.com.clinica.dto.request.MedicoDTO;
 import br.com.clinica.dto.response.MessageResponseDTO;
+import br.com.clinica.mapper.LaudoMedicoMapper;
 import br.com.clinica.mapper.MedicoMapper;
 import br.com.clinica.repository.MedicoRepository;
 import lombok.AllArgsConstructor;
@@ -22,7 +23,7 @@ public class MedicoService {
 	private MedicoRepository medicoRepository;
 	
 	 private final MedicoMapper medicoMapper = MedicoMapper.INSTANCE;
-
+	 
 	 public MessageResponseDTO createMedico(MedicoDTO medicoDTO) {
 		 Medico medicoToSave = medicoMapper.toModel(medicoDTO);
 		 

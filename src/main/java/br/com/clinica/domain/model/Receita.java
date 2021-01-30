@@ -38,11 +38,11 @@ public class Receita {
 	@Column(nullable = false,name = "observacao", length=200)
 	private String observacao;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "medico_id")
+	@ManyToOne
+    @JoinColumn(name = "medico_id", nullable = false)
 	private Medico medico;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
     @JoinColumn(name = "medicamento_id")
 	private Medicamento medicamento;
 

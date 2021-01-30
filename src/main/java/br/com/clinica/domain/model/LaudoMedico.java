@@ -14,9 +14,11 @@ import lombok.*;
  * https://github.com/renatoredes
  */
 
-@Data
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class LaudoMedico {
 
 	@EqualsAndHashCode.Include
@@ -28,12 +30,13 @@ public class LaudoMedico {
 	private String descricaoLaudoMedico;
 	
 
-	@Column(name = "data_laudo_medico")
-	private LocalDate dataLaudoMedico;
-	
-	@Column(name = "hora_laudo_medico")
-	private LocalTime horaLaudoMedico;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "laudoMedico")
-	private List<Medico> consultas = new ArrayList<>();
+//	@Column(name = "data_laudo_medico")
+//	private LocalDate dataLaudoMedico;
+//	
+//	@Column(name = "hora_laudo_medico")
+//	private LocalTime horaLaudoMedico;
+//	
+//	@ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "medico_id", nullable = false)
+//	private Medico medico;
 }
