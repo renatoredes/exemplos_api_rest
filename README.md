@@ -92,7 +92,7 @@ de acordo com o diagrama de banco de dados ou issue aberta..<br />
 * cadastro de usuários do sistema aos administradores
 * cadastro de funcionarios 
 * cadastro de pacientes 
-* cadastro de médicos - baixe a branch: medico_feature 👉👉 [Documentação](https://github.com/renatoredes/exemplo_crud_jpa_api_padroes/wiki).📝📝📝
+* cadastro de médicos - baixe a branch: medico_feature 👉👉 [Documentação](https://github.com/renatoredes/exemplos_api_rest/wiki/Medico_feature).📝📝📝
 * cadastro de planos de saúde conveniados
 * cadastro de cargos
 <br />
