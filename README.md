@@ -74,7 +74,7 @@ de acordo com o diagrama de banco de dados ou issue aberta..<br />
 * 🚨🚨 ATENÇÃO PROJETO EM ANDAMENTO.
 ![cat](https://github.com/renatoredes/exemplos_api_rest/blob/modelagem-dados-hibernate/screenshot/ModelagemHibernateDev.png)
 
-### branch inicial: modelagem-dados-hibernate
+### branch modelagem das tabelas utilizando hibernate jpa: modelagem-dados-hibernate
 
 ### Requisitos Funcionais
 * relatório de agendamentos de consultas médicas
