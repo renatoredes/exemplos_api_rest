@@ -58,7 +58,7 @@ e criar um projeto front-end, você pode criar um exemplo e documentar da mesma 
 ### O que já temos pronto neste projeto para ser reutilizado ?
 * CRUD: Padrões de Projetos + Spring Boot + JPA + JPQL. (branch: exemplo-api-rest-utilizando-jpa-jpql)
 * CRUD: Utilizando recursos Spring Data (branch: exemplo-utilizando-spring-data)
-* Estamos evoluindo o projeto 🚀🚀🚀🚀
+* Estamos evoluindo o projeto de clínica médica 🚀🚀🚀🚀
 
 ## Exemplo projeto de automação sistema clínica médica
 * Regras para contribuintes do projeto neste exemplo de automação clínica <br />
