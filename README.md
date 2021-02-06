@@ -11,7 +11,7 @@
 ### Objetivo
 Disponibilizar exemplos de API REST que pode ser reutilizável em produção ou em projetos de estudos.<br />
 
-### Concumidores da API
+### Consumidores da API
 As API de exemplo aqui poderá ser consumida por qualquer framework de sua escolha.<br />
 Exemplo: Angular, React, VueJS, Laravel e outros.
 
