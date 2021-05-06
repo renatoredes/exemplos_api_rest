@@ -102,4 +102,12 @@ de acordo com o diagrama de banco de dados ou issue aberta..<br />
 <br />
 
 ## License
-MIT © [Renato Ferreira](https://github.com/renatoredes)
+MIT © [Renato Ferreira](https://github.com/renatoredes)<br />
+
+## 👨👩 Social [🔝](#welcome-badges-4-readmemd-profile)
+
+Badge | URL
+------------ | -------------
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /> | [Renato](https://www.linkedin.com/in/renatoredes/)<br />
+
+
